@@ -1,0 +1,17 @@
+Name: # Name for this lab configuration
+Gazebo 
+
+InitializationHandler:
+handlers.init.gazeboInit
+
+PoseHandler:
+handlers.pose.gazeboPose
+
+SensorHandler:
+handlers.sensor.dummySensor
+
+ActuatorHandler:
+handlers.actuator.dummyActuator
+
+LocomotionCommandHandler:
+handlers.locomotionCommand.gazeboLocomotionCommand

@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- start gazebo with an ltlmop world -->
+  <param name="/use_sim_time" value="true" />
+
+  <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find gazebo_worlds)/ltlmop_map.world" respawn="false" output="screen"/>
+
+  <!-- start pr2 robot -->
+  <include file="$(find pr2_gazebo)/pr2.launch"/>
+
+</launch>
+

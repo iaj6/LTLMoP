@@ -1,0 +1,8 @@
+<package>
+<description brief="locomotionCommand">Locomotion Command</description>
+<author>LTLMoP</author>
+<license>BSD</license>
+<depend package="roscpp" />
+<depend package="std_msgs" />
+<depend package="geometry_msgs" />
+</package>

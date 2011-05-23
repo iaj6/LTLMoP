@@ -1,0 +1,17 @@
+<package>
+  <description brief="gazebo_worlds">
+
+     gazebo_worlds
+
+  </description>
+  <author>CompAdmin</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/gazebo_worlds</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+
