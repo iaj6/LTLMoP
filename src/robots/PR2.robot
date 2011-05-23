@@ -9,4 +9,4 @@ MotionControlHandler: # Module with continuous controller for moving between reg
 handlers.motionControl.heatController
 
 DriveHandler:
-handlers.drive.gazeboDrive
+handlers.drive.holonomicDrive

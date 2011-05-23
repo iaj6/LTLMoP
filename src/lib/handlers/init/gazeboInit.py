@@ -19,8 +19,7 @@ class initHandler:
 	ltlmop_map_path = ltlmop_path + "_simbg.png"
 
 	shutil.copy (ltlmop_map_path, texture_dir)
-	ltlmop_pic = proj.getBackgroundImagePath()
-	full_pic_path = texture_dir + "/" + ltlmop_pic
+	full_pic_path = texture_dir + "/" + proj.project_basename + "_simbg.png"
 	shutil.copyfile (full_pic_path, (texture_dir + "/" + 'ltlmop_map.png'))
 
 	

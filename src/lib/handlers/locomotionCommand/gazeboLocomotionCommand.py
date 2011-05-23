@@ -17,5 +17,8 @@ class locomotionCommandHandler:
 	rospy.init_node('locomotionCommand')
 
     def sendCommand(self, cmd):
-	twist = cmd
+	#twist = cmd
+	twist = Twist()	
+	twist.linear.x = cmd[0]
+	twist.linear.y = cmd[1]
 	self.pub.publish(twist)
