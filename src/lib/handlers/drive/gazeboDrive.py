@@ -16,32 +16,12 @@ class driveHandler:
 	try:
             self.loco = proj.loco_handler
             self.coordmap = proj.coordmap_lab2map
+	    self.pose_handler = proj.pose_handler
         except NameError:
             print "(DRIVE) Locomotion Command Handler not found."
             exit(-1)
-	self.turning = False 
-
-
+	self.turning = False
+	
     def setVelocity(self, x, y, theta=0):
 	twist = Twist()
-	# First get the current pose of the robot.
-	velangle = math.atan2(y,x) + math.pi/2
-	rel_heading = theta-velangle
-	rel_heading = math.atan2(math.sin(rel_heading),math.cos(rel_heading))	
-
-	#print "theta = ", theta, " desired angle = ", velangle, "rel_heading = ", rel_heading
-
-	if (not self.turning and abs(rel_heading) > math.pi/6):
-		self.turning = True		
-		print "not turning"
-	if (self.turning) :		
-		twist.angular.z = -3 * cmp (rel_heading,0)
-		twist.linear.x = 0
-		twist.linear.y =0
-		print "turning"	
-	else:
-		print "going straight"
-		twist.angular.z = 0
-		twist.linear.x = x
-		twist.linear.y = y
 	self.loco.sendCommand(twist)

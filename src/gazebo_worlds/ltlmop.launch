@@ -5,7 +5,11 @@
 
   <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find gazebo_worlds)/ltlmop_map.world" respawn="false" output="screen"/>
 
-  <!-- start pr2 robot -->
+  <!-- start pr2 robot armless  
+  <include file="$(find pr2_gazebo)/pr2_no_arms.launch"/>
+  -->
+
+  <!-- start pr2 robot --> 
   <include file="$(find pr2_gazebo)/pr2.launch"/>
 
 </launch>

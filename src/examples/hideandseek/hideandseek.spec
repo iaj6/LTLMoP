@@ -26,21 +26,22 @@ HnS_stage.robot
 ======== EXPERIMENT CONFIG 1 ========
 
 Calibration: # Coordinate transformation between map and experiment: XScale, XOffset, YScale, YOffset
-0.0100832261975,-3.10740369646,-0.0090486321417,2.46124893359
+0.011521048194,-5.96074194633,-0.0273213086376,6.99859880412
 
 InitialRegion: # Initial region number
 10
 
 InitialTruths: # List of initially true propositions
+seeker
 
 Lab: # Lab configuration file
-naoReal.lab
+gazeboRos.lab
 
 Name: # Name of the experiment
 ASL
 
 RobotFile: # Relative path of robot description file
-nao_hns.robot
+PR2.robot
 
 
 ======== SETTINGS ========
@@ -81,10 +82,10 @@ Closet=p10
 Danger=p9
 Wall=p3
 Gym=p8
-others=p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26
+Parking=p6
 Tree=p4
 SchoolWall=p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37
-Parking=p6
+others=p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26
 between$Tree$and$Wall$=p2
 
 Spec: # Specification in simple English
@@ -152,5 +153,6 @@ If you were activating say_imfound then stay there
 If you were activating say_foundyou then stay there
 If you were activating say_hider then stay there
 If you were activating say_seeker then stay there
+seeker
 
 

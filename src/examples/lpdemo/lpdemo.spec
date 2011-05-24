@@ -51,8 +51,8 @@ RegionMapping:
 
 bridge=p9
 between$bridge$and$apple_tree$=p10,p12,p55,p56,p57
-near$bear_colony$40=p13,p50,p51,p52,p53,p54
 bear_colony=p13
+near$bear_colony$40=p13,p50,p51,p52,p53,p54
 pear_tree=p4
 upper_river=p12,p23,p24
 apple_tree=p14

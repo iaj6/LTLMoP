@@ -26,21 +26,22 @@ sheepdog_stage.robot
 ======== EXPERIMENT CONFIG 1 ========
 
 Calibration: # Coordinate transformation between map and experiment: XScale, XOffset, YScale, YOffset
-0.0102655727979,-3.03586515592,-0.0108150581347,3.08960925333
+0.0121926985384,-6.02037863876,-0.0238431513863,6.55266195698
 
 InitialRegion: # Initial region number
 2
 
 InitialTruths: # List of initially true propositions
+herding
 
 Lab: # Lab configuration file
-cornell_asl.lab
+gazeboRos.lab
 
 Name: # Name of the experiment
 ASL
 
 RobotFile: # Relative path of robot description file
-sheepdog_real.robot
+PR2.robot
 
 
 ======== SETTINGS ========

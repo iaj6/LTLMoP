@@ -14,13 +14,13 @@ InitialRegion: # Initial region number
 InitialTruths: # List of initially true propositions
 
 Lab: # Lab configuration file
-playerstage.lab
+gazeboRos.lab
 
 Name: # Name of the experiment
 PlayerStage
 
 RobotFile: # Relative path of robot description file
-pioneer_stage.robot
+PR2.robot
 
 
 ======== EXPERIMENT CONFIG 1 ========

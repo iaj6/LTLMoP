@@ -18,7 +18,7 @@ class locomotionCommandHandler:
 
     def sendCommand(self, cmd):
 	#twist = cmd
-	twist = Twist()	
-	twist.linear.x = cmd[0]
-	twist.linear.y = cmd[1]
+	twist = Twist()
+	twist.linear.x = cmd[0] * 10
+	twist.linear.y = cmd[1] * 10
 	self.pub.publish(twist)
