@@ -27,7 +27,8 @@ class initHandler:
 	
 	# Set ROS package path to include gazebo_worlds where the launch files are.
 	root = proj.ltlmop_root
-	temp = os.path.join(root,'gazebo_worlds')
+	temp = os.path.join(root, 'etc')
+	temp = os.path.join(temp,'gazebo_worlds')
 	ROS_PACKAGE_PATH = temp + ":" + os.getenv('ROS_PACKAGE_PATH')
 	os.environ["ROS_PACKAGE_PATH"] = ROS_PACKAGE_PATH
 

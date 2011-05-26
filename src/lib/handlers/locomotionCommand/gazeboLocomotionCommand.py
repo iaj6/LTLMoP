@@ -17,7 +17,9 @@ class locomotionCommandHandler:
 	rospy.init_node('locomotionCommand')
 
     def sendCommand(self, cmd):
-	#twist = cmd
+	#  Just set linear velocity to cmd[0] and cmd[1] for x and y velocities
+	#  Then publish them to the base controller to move the pr2
+	#  Currently multiplying it by 10 to try and make the pr2 move faster but does seem to have much affect
 	twist = Twist()
 	twist.linear.x = cmd[0] * 10
 	twist.linear.y = cmd[1] * 10

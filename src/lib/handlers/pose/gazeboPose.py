@@ -15,6 +15,8 @@ gazeboPose.py - Gazebo Pose Handler
 
 class poseHandler:
     def __init__(self, proj, shared_data):
+	#  GetModelState expects the arguments model_name and relative_entity_name
+	#  In this case it is pr2 and world respectively but can be changed for different robots and environments	
 	self.model_name = 'pr2'
     	self.relative_entity_name = 'world'
 	self.last_pose = None
@@ -22,6 +24,8 @@ class poseHandler:
     def getPose(self,cached = False):
     	
 	if not cached or self.last_pose is None:
+		#  Ros service call to get model state
+		#  This returns a GetModelStateResponse, which contains data on pose and twist
 		rospy.wait_for_service('/gazebo/get_model_state')
 	    	try:
 			gms = rospy.ServiceProxy('/gazebo/get_model_state', GetModelState)
@@ -34,6 +38,7 @@ class poseHandler:
 		self.or_y = resp.pose.orientation.y
 		self.or_z = resp.pose.orientation.z
 		self.or_w = resp.pose.orientation.w
+		#  Use the tf module transforming quaternions to euler
 		angles = euler_from_quaternion([self.or_x, self.or_y, self.or_z, self.or_w])
 		self.theta = angles[2]	
 		self.last_pose = array([self.pos_x, self.pos_y, self.theta])
