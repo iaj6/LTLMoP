@@ -19,8 +19,8 @@ class locomotionCommandHandler:
     def sendCommand(self, cmd):
 	#  Just set linear velocity to cmd[0] and cmd[1] for x and y velocities
 	#  Then publish them to the base controller to move the pr2
-	#  Currently multiplying it by 10 to try and make the pr2 move faster but does seem to have much affect
+	#  Currently multiplying it by 5 to try and make the pr2 move faster but does seem to have much affect
 	twist = Twist()
-	twist.linear.x = cmd[0] * 10
-	twist.linear.y = cmd[1] * 10
+	twist.linear.x = cmd[0] * 5
+	twist.linear.y = cmd[1] * 5
 	self.pub.publish(twist)
