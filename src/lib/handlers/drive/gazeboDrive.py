@@ -37,15 +37,15 @@ class driveHandler:
    		
 		if (not self.turning and abs(rel_heading) > math.pi/6):
      			self.turning = True    
-     			print "not turning"
+     			#print "not turning"
    		if (self.turning) :    
      			twist.angular.z = -3 * cmp (rel_heading,0)
      			twist.linear.x = 0
   			twist.linear.y =0
-     			print "turning"  
+     			#print "turning"  
 
    		else:
-     			print "going straight"
+     			#print "going straight"
      			twist.angular.z = 0
      			twist.linear.x = x
      			twist.linear.y = y

@@ -42,6 +42,5 @@ class poseHandler:
 		angles = euler_from_quaternion([self.or_x, self.or_y, self.or_z, self.or_w])
 		self.theta = angles[2]	
 		self.last_pose = array([self.pos_x, self.pos_y, self.theta])
-		print "last pose = ", self.last_pose
 	return self.last_pose
 
